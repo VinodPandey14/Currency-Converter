@@ -43,6 +43,5 @@ Welcome to the Currency Converter project! Convert currencies quickly and effort
 - Implement additional features like a currency rate graph or multiple conversion scenarios.
 - Improve the user interface with animations and transitions.
 
-Feel free to contribute to the project and make it even more awesome! If you encounter any issues or have suggestions, please open an [issue](https://github.com/yourusername/currency-converter/issues).
-
+Feel free to contribute to the project and make it even more awesome! 
 Happy converting! 🌐💸✨
