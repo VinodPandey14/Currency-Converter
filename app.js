@@ -1,5 +1,4 @@
-const API_URL =
-  "https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies";
+const API_URL = "https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies";
 const selectors = document.querySelectorAll(".select-country select");
 const btn = document.querySelector("button");
 const fromCurr = document.querySelector("#from select");
@@ -35,12 +34,13 @@ btn.addEventListener("click", async (evt) => {
   evt.preventDefault();
   let amt = document.querySelector(".amount input");
   let amount = amt.value;
-  const URL = `${API_URL}/${fromCurr.value.toLowerCase()}/${toCurr.value.toLowerCase()}.json`;
+  const URL = `${API_URL}/${fromCurr.value.toLowerCase()}.json`;
   let response = await fetch(URL);
   let data = await response.json();
-  let rate = data[toCurr.value.toLowerCase()];
+  let rate = data[fromCurr.value.toLowerCase()][toCurr.value.toLowerCase()];
   let result = amount * rate;
   finalResult.innerText = `${amount} ${fromCurr.value} = ${result.toFixed(2)} ${
     toCurr.value
   }`;
 });
+
